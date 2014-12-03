@@ -4,11 +4,11 @@
 <ul>
 <li class="wkHead">Weekly Summary: {{this.forecast.daily.summary | json}}</li>
 </ul>
-<ul id="wkSummary" class="wkList col span_3_of_3" data-ng-repeat="daily in this.forecast">
-  <li>Daily Time: {{this.forecast.daily.data[0].time | json}}</li>
-  <li>Daily Summary: {{this.forecast.daily.data[0].summary | json}}</li>
-  <li>Daily Min Temp: {{this.forecast.daily.data[0].temperatureMin | json}}</li>
-  <li>Daily Max Temp: {{this.forecast.daily.data[0].temperatureMax | json}}</li>
+<ul id="wkSummary" class="wkList col span_3_of_3" data-ng-repeat="daily in this.forecast.daily.data">
+  <li>Daily Time: {{this.forecast.daily.data[$index].time | json}}</li>
+  <li>Daily Summary: {{this.forecast.daily.data[$index].summary | json}}</li>
+  <li>Daily Min Temp: {{this.forecast.daily.data[$index].temperatureMin | json}}</li>
+  <li>Daily Max Temp: {{this.forecast.daily.data[$index].temperatureMax | json}}</li>
   <br><br>
 </ul>
 
