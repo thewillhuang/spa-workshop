@@ -13,4 +13,11 @@
 </ul>
 
 <h3>News</h3>
-<div>{{this.news | json}}</div>
+<ul data-ng-repeat='title in this.news'>
+  <li data-ng-click='title.title'>{{title.title}}</li>
+<br>
+  <li>{{title.href}}</li>
+
+<!-- <div>{{this.news | json}}</div> -->
+  <li>
+</ul>
