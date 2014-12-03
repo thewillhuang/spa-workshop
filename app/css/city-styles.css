@@ -1,0 +1,16 @@
+/* city styles */
+
+.wkList {
+padding: 0 10%;
+}
+
+.wkHead {
+font-style: bold;
+}
+
+li {
+width: 100%;
+font-size .8em;
+color: black;
+margin: 10% 10%;
+}

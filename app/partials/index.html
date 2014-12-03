@@ -1,6 +1,7 @@
+
 <div>
-  <h2>Cities</h2>
+  <h2 id="cityHeader" class="city">Cities</h2>
   <ul ng-repeat="city in this.cities">
-    <li><a ng-href="/cities/{{city}}">{{city}}</a>
+    <li class="cityList"><a data-city="cities" ng-href="/cities/{{city}}">{{city}}</a>
   </ul>
 </div>

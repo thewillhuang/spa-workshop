@@ -1,8 +1,8 @@
 <h1>{{this.cityName}}</h1>
 
 <h3>Forecast</h3>
-<ul>
-  <li>Weekly Summary: {{this.forecast.daily.summary | json}}</li>
+<ul id="wkSummary" class="wkList col span_3_of_3">
+  <li class="wkHead">Weekly Summary: {{this.forecast.daily.summary | json}}</li>
   <li>Daily Time: {{this.forecast.daily.data[0].time | json}}</li>
   <li>Daily Summary: {{this.forecast.daily.data[0].summary | json}}</li>
   <li>Daily Min Temp: {{this.forecast.daily.data[0].temperatureMin | json}}</li>
