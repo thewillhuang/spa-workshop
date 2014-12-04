@@ -13,4 +13,9 @@
 </ul>
 
 <h3>News</h3>
-<div>{{this.news | json}}</div>
+<ul data-ng-repeat='title in this.news'>
+  <br>
+  <li>{{title.title}}</li>
+  <a href={{title.href}}>{{title.href}}</a>
+  <br>
+</ul>

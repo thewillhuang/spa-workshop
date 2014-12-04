@@ -6,7 +6,7 @@ angular.module('services').factory('news', function($http, $q) {
   return function(city) {
     var defer = $q.defer();
     $http({
-      method: 'GET', 
+      method: 'GET',
       url: '/proxy',
       params: {
         url: 'http://news.google.com/news/feeds?pz=1&cf=all&hdlOnly=1&hl=en&geo=' + encodeURIComponent(city),
@@ -31,9 +31,10 @@ angular.module('services').factory('news', function($http, $q) {
     var xmlDoc = parser.parseFromString(xmlString, 'text/xml');
     var articles = [];
     angular.forEach(xmlDoc.getElementsByTagName("item"), function(node) {
+      var actual_href = node.getElementsByTagName('link')[0].innerHTML.split(';url=');
       articles.push({
         title: node.getElementsByTagName("title")[0].innerHTML,
-        href: node.getElementsByTagName("link")[0].innerHTML
+        href: actual_href[1]
       });
     });
     return articles;
