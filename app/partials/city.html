@@ -14,10 +14,8 @@
 
 <h3>News</h3>
 <ul data-ng-repeat='title in this.news'>
-  <li data-ng-click='title.title'>{{title.title}}</li>
-<br>
-  <li>{{title.href}}</li>
-
-<!-- <div>{{this.news | json}}</div> -->
-  <li>
+  <br>
+  <li>{{title.title}}</li>
+  <a href={{title.href}}>{{title.href}}</a>
+  <br>
 </ul>
